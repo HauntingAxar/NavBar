@@ -9,14 +9,15 @@ nav ul {
     padding:0;
 }
 nav li {
-    list-style:none;
-    background-color:green;
-    color:antiquewhite;
+    display:flex;
     margin:0;
+    list-style:none;
+    min-width:200px;
     flex:1;
     text-align:center;
-    min-width:200px;
-    display:flex;
+    background-color:green;
+    color:antiquewhite;
+    position:relative;
 }
 nav a, nav a:visited {
     text-decoration:none;
@@ -27,4 +28,16 @@ nav a, nav a:visited {
 nav a:hover, nav a.active {
     color:green;
     background-color:rgb(173, 230, 180);
+}
+.dropdown-content {
+    position:absolute;
+    top:37px;
+    width:100%;
+    display:none;
+}
+nav li:hover .dropdown-content {
+    display:block;
+}
+.dropdown-content a{
+    font-weight:bold;
 }
