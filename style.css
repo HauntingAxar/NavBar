@@ -7,6 +7,7 @@ nav ul {
     flex-wrap:wrap;
     margin:0;
     padding:0;
+    z-index:10;
 }
 nav li {
     display:flex;
@@ -22,7 +23,7 @@ nav li {
 nav a, nav a:visited {
     text-decoration:none;
     width:100%;
-    padding: 8px 0px;
+    padding: 8px 0;
     color:antiquewhite;
 }
 nav a:hover, nav a.active {
@@ -34,10 +35,14 @@ nav a:hover, nav a.active {
     top:37px;
     width:100%;
     display:none;
+    z-index:20;
 }
 nav li:hover .dropdown-content {
     display:block;
 }
 .dropdown-content a{
     font-weight:bold;
+}
+.dropdown-content ul {
+    flex-direction:column;
 }
